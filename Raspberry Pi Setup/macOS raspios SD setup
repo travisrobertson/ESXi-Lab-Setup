@@ -1,15 +1,14 @@
 # macOS terminal commands
 
+# download raspios image
+wget https://downloads.raspberrypi.org/raspios_lite_armhf/images/raspios_lite_armhf-2021-05-28/2021-05-07-raspios-buster-armhf-lite.zip
+unzip 2021-05-07-raspios-buster-armhf-lite.zip
+
 # find your sd card
 diskutil list
 
 # for this example I'll use /dev/disk2
-
-
-
-
-unzip 2021-05-07-raspios-buster-armhf-lite.zip
 diskutil unmountDisk /dev/disk2
 
+# write raspios image to sd card
 sudo dd bs=1m if=~/Downloads 2021-05-07-raspios-buster-armhf-lite.img of=/dev/rdisk2
-

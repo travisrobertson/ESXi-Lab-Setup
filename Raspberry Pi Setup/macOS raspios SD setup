@@ -1,0 +1,15 @@
+# macOS terminal commands
+
+# find your sd card
+diskutil list
+
+# for this example I'll use /dev/disk2
+
+
+
+
+unzip 2021-05-07-raspios-buster-armhf-lite.zip
+diskutil unmountDisk /dev/disk2
+
+sudo dd bs=1m if=~/Downloads 2021-05-07-raspios-buster-armhf-lite.img of=/dev/rdisk2
+

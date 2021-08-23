@@ -26,3 +26,7 @@ blacklist vmw_vsock_virtio_transport_common
 install vsock_loopback /usr/bin/true
 install vmw_vsock_virtio_transport_common /usr/bin/true
 
+systemctl enable docker.service
+systemctl start docker.service
+
+docker pull pihole/pihole

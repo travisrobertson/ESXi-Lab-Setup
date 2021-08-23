@@ -26,5 +26,12 @@ Boot Maintenance Manager > Boot Options > Change Boot Order
 
 On main menu click Continue to exit the BIOS and start the ESXi Installer
 
-Continue standard install, ESXi will be installed on a dedicated USB drive.  A second USB drive will be required if you wish to create a local datastore.
+The familiar ESXi installation wizard starts.
 
+Quickly hit the SHIFT and O (letter O) key at the same time
+At the bottom of the screen, append to the existing text: autoPartitionOSDataSize=8192
+
+Press Enter to continue standard install, ESXi will use 8GB for installation and the rest should be available for a datastore.
+
+Remove install media and reboot.  Login to DCUI.
+Check storage, you should see datastore1 pre-configured with remaining USB storage.
